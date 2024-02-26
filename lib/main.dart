@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medical_test_range/screens/home_screem.dart';
 
 void main() {
   runApp(
-    ProviderScope(
+    const ProviderScope(
       child: MyApp(),
     ),
   );
@@ -22,21 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const homee(),
+      home: const HomeScreen(),
     );
-  }
-}
-
-class homee extends StatefulWidget {
-  const homee({super.key});
-
-  @override
-  State<homee> createState() => _homeeState();
-}
-
-class _homeeState extends State<homee> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
