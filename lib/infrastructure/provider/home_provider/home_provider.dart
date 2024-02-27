@@ -36,4 +36,13 @@ class HomeProvider extends ChangeNotifier {
       color: Colors.red,
     )
   ];
+
+  TextEditingController remarkControler = TextEditingController();
+  int displayValue = 0;
+  updateValue() {
+    if (remarkControler.text.trim() != '') {
+      displayValue = int.parse(remarkControler.text);
+      notifyListeners();
+    }
+  }
 }
